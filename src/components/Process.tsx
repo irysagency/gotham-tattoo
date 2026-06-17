@@ -68,7 +68,7 @@ const circleVariant = {
     scale: 1,
     backgroundColor: ACCENT,
     transition: {
-      scale: { type: "spring", stiffness: 320, damping: 11 },
+      scale: { stiffness: 320, damping: 11 },
       backgroundColor: { duration: 0.4, ease: EASE },
     },
   },
