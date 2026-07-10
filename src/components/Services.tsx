@@ -45,7 +45,7 @@ export default function Services() {
                 variants={cardVariants}
                 whileHover={{
                   y: -6,
-                  boxShadow: "0 0 30px 5px rgba(192, 57, 43, 0.25)",
+                  boxShadow: "0 0 30px 5px rgba(212, 164, 55, 0.25)",
                   transition: { duration: 0.3 },
                 }}
                 transition={{ duration: 0.4, ease: EASE }}

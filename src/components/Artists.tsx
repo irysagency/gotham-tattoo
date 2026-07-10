@@ -71,7 +71,7 @@ export default function Artists() {
               variants={cardVariants}
               whileHover={{
                 scale: 1.03,
-                boxShadow: "0 0 40px 8px rgba(192, 57, 43, 0.3)",
+                boxShadow: "0 0 40px 8px rgba(212, 164, 55, 0.3)",
                 transition: { duration: 0.3 },
               }}
               transition={{ duration: 0.4, ease: EASE }}

@@ -28,6 +28,11 @@ export type Service = {
   priceRange: string;
 };
 
+export type Stat = {
+  value: string;
+  label: string;
+};
+
 export type GalleryImage = {
   src: string;
   alt: string;
@@ -41,6 +46,10 @@ export type StudioConfig = {
   tagline: string;
   /** Longer studio story, shown in the About section. */
   description: string;
+  /** Personal headline for the About section. */
+  aboutTitle: string;
+  /** Three key figures shown under the About text. */
+  stats: Stat[];
 
   /** Contact details. */
   phone: string;
@@ -94,42 +103,46 @@ export type StudioConfig = {
 };
 
 export const studio: StudioConfig = {
-  name: "NOIR INK",
-  tagline: "Là où la peau devient toile.",
+  name: "GOTHAM TATTOO",
+  tagline: "Vos légendes, gravées dans la peau.",
   description:
-    "Niché au cœur du Marais, NOIR INK est un studio de tatouage privé pensé comme un atelier d'artiste. Depuis 2015, nous mettons un point d'honneur à ne réaliser que des pièces uniques, dessinées à la main et conçues pour traverser le temps. Ici, pas de catalogue impersonnel : chaque projet commence par une rencontre, une conversation, une intention. Lumière tamisée, encres de qualité supérieure et hygiène irréprochable — tout est réuni pour faire de votre tatouage une expérience à la hauteur de l'œuvre que vous porterez à vie.",
+    "À Agde, Gotham Tattoo Art Studio est un atelier collectif où la culture pop devient encre. Manga, jeux vidéo, comics et héros de toujours y côtoient la gravure sombre et le noir & gris le plus fin. Ici, chaque projet est une pièce unique, dessinée à la main et pensée pour rendre hommage à ce qui vous a marqué à vie. Ambiance feutrée, univers gothique et exigence de studio privé — on prend le temps de faire les choses bien.",
+  aboutTitle: "Un repaire d'artistes, pas une chaîne.",
+  stats: [
+    { value: "3", label: "Artistes résidents" },
+    { value: "∞", label: "Univers pop & manga" },
+    { value: "100%", label: "Créations sur-mesure" },
+  ],
 
-  phone: "+33 1 42 71 38 24",
-  email: "contact@noirink.fr",
+  phone: "06 00 00 00 00",
+  email: "gothamtattooartstudio@gmail.com",
   address: {
-    street: "14 rue des Gravilliers",
-    city: "Paris",
-    zip: "75003",
-    googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=14+rue+des+Gravilliers+75003+Paris",
+    street: "34 Rue Jean Roger",
+    city: "Agde",
+    zip: "34300",
+    googleMapsUrl: "https://maps.app.goo.gl/2JFk1YBpknBXHxPW7",
     coordinates: {
-      lat: 48.8654,
-      lng: 2.3552,
+      lat: 43.313266,
+      lng: 3.4685585,
     },
   },
 
   socials: {
-    instagram: "https://instagram.com/noirink.paris",
-    tiktok: "https://tiktok.com/@noirink.paris",
+    instagram: "https://www.instagram.com/gothamtattooartstudio/",
+    tiktok: "",
   },
 
-  accentColor: "#c0392b",
+  accentColor: "#d4a437",
 
   quote: {
-    text: "Un tatouage n'est pas une décoration. C'est une décision.",
-    author: "NOIR INK",
+    text: "Derrière chaque tattoo, il y a une personne qui dessine, qui doute, qui crée.",
+    author: "Gotham Tattoo Art Studio",
   },
 
-  establishedYear: 2015,
+  establishedYear: 2021,
 
-  heroImage:
-    "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&w=2070&q=80",
-  aboutImage:
-    "https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?w=800",
+  heroImage: "/images/hero/hero-01.jpg",
+  aboutImage: "/images/about/shop-03.jpg",
 
   nav: [
     { label: "Le studio", href: "#about" },
@@ -142,28 +155,25 @@ export const studio: StudioConfig = {
 
   artists: [
     {
-      name: "Mathis Lefèvre",
-      specialty: "Réalisme · Noir & gris",
-      bio: "Formé à Bruxelles puis à Berlin, Mathis transforme le noir et gris en portraits d'une précision saisissante. Chaque ombre, chaque texture est pensée pour traverser les années sans rien perdre de sa profondeur.",
-      instagram: "https://instagram.com/mathis.noirink",
-      photo:
-        "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=900&h=1100&q=80",
+      name: "Pick",
+      specialty: "Pop culture · Manga · Japonais",
+      bio: "Fondateur de Gotham, Pick donne vie aux héros de la pop culture — de Dragon Ball à Fullmetal Alchemist — en couleur éclatante comme en blackwork. Un trait précis, un sens du détail obsessionnel et l'envie de faire kiffer chaque client avec une pièce dont il se souviendra.",
+      instagram: "https://www.instagram.com/pick.gotham.ttt/",
+      photo: "/images/artists/pick.jpg",
     },
     {
-      name: "Léa Moreau",
-      specialty: "Blackwork · Ornemental",
-      bio: "Léa puise dans la dentelle, la géométrie sacrée et l'ornement pour composer des pièces qui épousent le corps. Son trait, d'un noir profond et parfaitement maîtrisé, fait de chaque tatouage une parure singulière.",
-      instagram: "https://instagram.com/lea.noirink",
-      photo:
-        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&h=1100&q=80",
+      name: "Matagoth",
+      specialty: "Gravure · Noir & gris · Dark",
+      bio: "Inspirée par l'art ancien, le mystique et le symbolique, Matagoth compose des pièces en gravure et noir & gris à l'atmosphère médiévale et onirique. Soleils, créatures et blasons naissent d'un dotwork patient et d'un univers profondément personnel.",
+      instagram: "https://www.instagram.com/matagoth.ttt/",
+      photo: "/images/artists/matagoth.jpg",
     },
     {
-      name: "Inès Caron",
-      specialty: "Japonais · Irezumi",
-      bio: "Gardienne de la tradition japonaise, Inès dessine de vastes compositions — carpes, vagues et pivoines — dans le plus grand respect de l'irezumi. Ses fonds travaillés donnent à chaque motif un mouvement vivant.",
-      instagram: "https://instagram.com/ines.noirink",
-      photo:
-        "https://images.unsplash.com/photo-1521119989659-a83eee488004?auto=format&fit=crop&w=900&h=1100&q=80",
+      name: "Panda",
+      specialty: "Custom · Pop art",
+      bio: "Artiste custom résident, Panda peint et détourne les icônes de la pop culture — One Piece, Mario, Rick & Morty — sur bois et supports uniques. Ses créations colorées et son trait cartoon habillent le studio et prolongent l'univers Gotham hors de la peau.",
+      instagram: "https://www.instagram.com/pandartkustom/",
+      photo: "/images/artists/panda.jpg",
     },
   ],
 
@@ -171,91 +181,71 @@ export const studio: StudioConfig = {
     {
       name: "Projet sur-mesure",
       description:
-        "Une pièce entièrement dessinée pour vous, de la première esquisse à la dernière séance. Nous prenons le temps de comprendre votre histoire avant de la graver dans la peau.",
+        "Votre personnage, votre univers, votre histoire : une pièce entièrement dessinée pour vous, de la première esquisse à la dernière séance. Pop culture, manga, réalisme ou perso — on la conçoit ensemble.",
       priceRange: "À partir de 150 €",
     },
     {
-      name: "Flash & pièces du studio",
+      name: "Journée flash à volonté",
       description:
-        "Une sélection de motifs originaux imaginés par nos artistes, prêts à être tatoués. Des designs uniques, jamais reproduits deux fois à l'identique.",
-      priceRange: "80 € – 250 €",
+        "Le concept signature du studio : une journée dédiée où vous piochez dans une sélection de flashs originaux à tarif fixe. Des designs uniques, jamais reproduits deux fois à l'identique.",
+      priceRange: "Tarif journée",
     },
     {
-      name: "Grandes pièces & dos complet",
+      name: "Gravure & noir & gris",
       description:
-        "Manchettes, dos, jambes : les projets d'envergure se construisent en plusieurs séances, dans une cohérence absolue du premier au dernier trait.",
-      priceRange: "Sur devis · 120 €/h",
+        "L'univers dark et mystique de l'atelier : gravure, dotwork et noir & gris finement ombrés, pour des pièces à l'atmosphère ancienne et symbolique qui traversent le temps.",
+      priceRange: "Sur devis",
     },
     {
-      name: "Recouvrement & retouche",
+      name: "Strass dentaire",
       description:
-        "Nous redonnons vie à un ancien tatouage ou le faisons disparaître sous une nouvelle création, pensée pour le sublimer plutôt que le masquer.",
+        "La touche détail du studio : pose de strass dentaire pour un sourire qui a du caractère. Une prestation soignée, réalisée avec le même souci d'esthétique que nos tatouages.",
       priceRange: "Sur consultation",
     },
   ],
 
-  galleryStyles: ["Blackwork", "Realism", "Japanese", "Traditional"],
+  galleryStyles: ["Pop culture", "Manga", "Noir & gris", "Gravure"],
 
   gallery: [
     {
-      src: "https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?auto=format&fit=crop&w=1200&q=80",
-      alt: "Tatouage blackwork à l'encre noire sur l'avant-bras",
-      style: "Blackwork",
+      src: "/images/gallery/01.jpg",
+      alt: "Tatouage Deadpool en couleur sur l'avant-bras",
+      style: "Pop culture",
     },
     {
-      src: "https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&w=1200&q=80",
-      alt: "Composition graphique noire et géométrique",
-      style: "Blackwork",
+      src: "/images/gallery/02b.jpg",
+      alt: "Cercle de transmutation Fullmetal Alchemist en blackwork",
+      style: "Manga",
     },
     {
-      src: "https://images.unsplash.com/photo-1503443207922-dff7d543fd0e?auto=format&fit=crop&w=1200&q=80",
-      alt: "Lignes pleines et aplats de noir profond",
-      style: "Blackwork",
+      src: "/images/gallery/03.jpg",
+      alt: "C-18 (Dragon Ball) tatouée en couleur sur le bras",
+      style: "Manga",
     },
     {
-      src: "https://images.unsplash.com/photo-1562962230-16e4623d36e6?auto=format&fit=crop&w=1200&q=80",
-      alt: "Portrait réaliste tatoué en noir et gris",
-      style: "Realism",
+      src: "/images/gallery/04.jpg",
+      alt: "Dragon Mortal Kombat en blackwork sur le bras",
+      style: "Pop culture",
     },
     {
-      src: "https://images.unsplash.com/photo-1556760544-74068565f05c?auto=format&fit=crop&w=1200&q=80",
-      alt: "Détail réaliste finement ombré",
-      style: "Realism",
+      src: "/images/gallery/05.jpg",
+      alt: "Soleil gravé en noir & gris sur le bras",
+      style: "Gravure",
     },
     {
-      src: "https://images.unsplash.com/photo-1597586124394-fbd6ef244026?auto=format&fit=crop&w=1200&q=80",
-      alt: "Travail d'ombre réaliste sur la peau",
-      style: "Realism",
+      src: "/images/gallery/06b.jpg",
+      alt: "Masse d'armes gravée en noir & gris sur l'avant-bras",
+      style: "Gravure",
     },
     {
-      src: "https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?auto=format&fit=crop&w=1200&q=80",
-      alt: "Tatouage japonais coloré façon irezumi",
-      style: "Japanese",
+      src: "/images/gallery/07.jpg",
+      alt: "Chat chevalier en dotwork sur la jambe",
+      style: "Noir & gris",
     },
     {
-      src: "https://images.unsplash.com/photo-1604881988758-f76ad2f7aac1?auto=format&fit=crop&w=1200&q=80",
-      alt: "Motif traditionnel japonais sur le bras",
-      style: "Japanese",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1612698093158-e07ac200d44e?auto=format&fit=crop&w=1200&q=80",
-      alt: "Composition japonaise aux fonds travaillés",
-      style: "Japanese",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1542727365-19732a80dcfd?auto=format&fit=crop&w=1200&q=80",
-      alt: "Tatouage traditionnel old school aux couleurs franches",
-      style: "Traditional",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1610216705422-caa3fcb6d158?auto=format&fit=crop&w=1200&q=80",
-      alt: "Flash traditionnel au contour épais",
-      style: "Traditional",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1200&q=80",
-      alt: "Pièce traditionnelle pleine de caractère",
-      style: "Traditional",
+      src: "/images/gallery/08.jpg",
+      alt: "Chat samouraï gravé en noir & gris sur le bras",
+      style: "Noir & gris",
     },
   ],
 };

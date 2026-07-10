@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
-const ACCENT = "#c0392b";
+const ACCENT = "#d4a437";
 
 const STEPS = [
   {
@@ -63,7 +63,7 @@ const fadeUp = {
   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: EASE } },
 };
 const circleVariant = {
-  hidden: { scale: 0, backgroundColor: "rgba(192, 57, 43, 0)" },
+  hidden: { scale: 0, backgroundColor: "rgba(212, 164, 55, 0)" },
   show: {
     scale: 1,
     backgroundColor: ACCENT,
@@ -135,7 +135,7 @@ export default function Process() {
                       Tailwind's transform never collides with motion's scale) */}
                   <motion.div
                     variants={circleVariant}
-                    className="absolute left-0 top-0 z-10 flex h-12 w-12 items-center justify-center rounded-full border transition-shadow duration-300 hover:shadow-[0_0_20px_5px_rgba(192,57,43,0.6)] md:left-[calc(50%-1.5rem)] md:top-[calc(50%-1.5rem)]"
+                    className="absolute left-0 top-0 z-10 flex h-12 w-12 items-center justify-center rounded-full border transition-shadow duration-300 hover:shadow-[0_0_20px_5px_rgba(212,164,55,0.6)] md:left-[calc(50%-1.5rem)] md:top-[calc(50%-1.5rem)]"
                     style={{ borderColor: ACCENT }}
                   >
                     <Icon

@@ -17,7 +17,7 @@ import { Instagram, TikTok } from "@/components/icons";
 import { studio } from "@/config/studio";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
-const ACCENT = "#c0392b";
+const ACCENT = "#d4a437";
 
 const mapSrc = `https://www.google.com/maps?q=${studio.address.coordinates.lat},${studio.address.coordinates.lng}&z=15&output=embed`;
 
@@ -35,7 +35,7 @@ const PROJECT_SIZES = [
 
 // Shared field styling: dark surface, white text, accent focus, no native chrome.
 const inputClasses =
-  "w-full appearance-none rounded-lg border border-white/10 bg-[#1a1a1a] px-4 py-3 text-white outline-none transition-colors duration-300 placeholder:text-white/30 focus:border-[#c0392b]";
+  "w-full appearance-none rounded-lg border border-white/10 bg-[#1a1a1a] px-4 py-3 text-white outline-none transition-colors duration-300 placeholder:text-white/30 focus:border-[#d4a437]";
 const labelClasses =
   "mb-2 block text-xs uppercase tracking-[0.2em] text-white/50";
 const interStyle = { fontFamily: "'Inter', sans-serif", fontWeight: 300 };
@@ -199,15 +199,17 @@ export default function Contact() {
               >
                 <Instagram className="h-5 w-5" aria-hidden="true" />
               </a>
-              <a
-                href={studio.socials.tiktok}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="TikTok"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-white transition-all duration-300 hover:border-gold/40 hover:text-gold"
-              >
-                <TikTok className="h-5 w-5" aria-hidden="true" />
-              </a>
+              {studio.socials.tiktok && (
+                <a
+                  href={studio.socials.tiktok}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="TikTok"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-white transition-all duration-300 hover:border-gold/40 hover:text-gold"
+                >
+                  <TikTok className="h-5 w-5" aria-hidden="true" />
+                </a>
+              )}
             </div>
           </div>
 
@@ -405,7 +407,7 @@ export default function Contact() {
                   required
                   checked={consent}
                   onChange={(e) => setConsent(e.target.checked)}
-                  className="mt-0.5 h-4 w-4 shrink-0 accent-[#c0392b]"
+                  className="mt-0.5 h-4 w-4 shrink-0 accent-[#d4a437]"
                 />
                 J&apos;accepte d&apos;être contacté par téléphone ou email pour
                 ce projet
@@ -415,7 +417,7 @@ export default function Contact() {
               <motion.button
                 variants={fieldVariant}
                 type="submit"
-                className="group inline-flex w-full items-center justify-center gap-3 rounded-lg py-5 text-xl uppercase tracking-[0.05em] text-white transition-all duration-300 hover:brightness-110 hover:shadow-[0_0_25px_5px_rgba(192,57,43,0.5)]"
+                className="group inline-flex w-full items-center justify-center gap-3 rounded-lg py-5 text-xl uppercase tracking-[0.05em] text-white transition-all duration-300 hover:brightness-110 hover:shadow-[0_0_25px_5px_rgba(212,164,55,0.5)]"
                 style={{
                   backgroundColor: ACCENT,
                   fontFamily: "'Bebas Neue', sans-serif",

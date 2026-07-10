@@ -7,16 +7,7 @@ import { studio } from "@/config/studio";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
-type Stat = {
-  value: string;
-  label: string;
-};
-
-const stats: Stat[] = [
-  { value: String(studio.establishedYear), label: "Année d'ouverture" },
-  { value: String(studio.artists.length), label: "Artistes résidents" },
-  { value: String(studio.galleryStyles.length), label: "Styles maîtrisés" },
-];
+const stats = studio.stats;
 
 const statsContainer = {
   hidden: {},
@@ -57,7 +48,7 @@ export default function About() {
               className="font-sans text-4xl font-light tracking-tight text-foreground md:text-6xl"
               style={{ fontFamily: "'Bebas Neue', sans-serif", letterSpacing: "0.05em" }}
             >
-              Un atelier, pas une chaîne.
+              {studio.aboutTitle}
             </h2>
 
             <p

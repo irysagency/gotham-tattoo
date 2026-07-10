@@ -10,7 +10,7 @@ import { studio } from "@/config/studio";
  * over any interactive element it shrinks and fills with the brand accent.
  */
 export default function CustomCursor() {
-  const accent = studio.accentColor; // #c0392b
+  const accent = studio.accentColor; // #d4a437
   const [enabled, setEnabled] = useState(false);
   const [hovering, setHovering] = useState(false);
 

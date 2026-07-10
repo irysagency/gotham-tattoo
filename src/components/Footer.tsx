@@ -137,19 +137,21 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-white transition-all duration-300 hover:border-gold/40 hover:text-gold hover:shadow-[0_0_15px_3px_rgba(192,57,43,0.5)] hover:scale-110"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-white transition-all duration-300 hover:border-gold/40 hover:text-gold hover:shadow-[0_0_15px_3px_rgba(212,164,55,0.5)] hover:scale-110"
               >
                 <Instagram className="h-5 w-5" />
               </a>
-              <a
-                href={studio.socials.tiktok}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="TikTok"
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-white transition-all duration-300 hover:border-gold/40 hover:text-gold hover:shadow-[0_0_15px_3px_rgba(192,57,43,0.5)] hover:scale-110"
-              >
-                <TikTok className="h-5 w-5" />
-              </a>
+              {studio.socials.tiktok && (
+                <a
+                  href={studio.socials.tiktok}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="TikTok"
+                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-white transition-all duration-300 hover:border-gold/40 hover:text-gold hover:shadow-[0_0_15px_3px_rgba(212,164,55,0.5)] hover:scale-110"
+                >
+                  <TikTok className="h-5 w-5" />
+                </a>
+              )}
             </div>
             <a
               href="#contact"
