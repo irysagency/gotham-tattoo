@@ -141,8 +141,8 @@ export const studio: StudioConfig = {
 
   establishedYear: 2021,
 
-  heroImage: "/images/hero/hero-01.jpg",
-  aboutImage: "/images/about/shop-03.jpg",
+  heroImage: "/images/hero/hero-02.jpg",
+  aboutImage: "/images/about/shop-04.jpg",
 
   nav: [
     { label: "Le studio", href: "#about" },
